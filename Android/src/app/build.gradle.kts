@@ -39,7 +39,7 @@ android {
     versionCode = 19
     versionName = "1.0.10"
     ndk {
-    abiFilters "arm64-v8a", "armeabi-v7a"
+    abiFilters += setOf("arm64-v8a", "armeabi-v7a")
 }
     // Needed for HuggingFace auth workflows.
     // Use the scheme of the "Redirect URLs" in HuggingFace app.
