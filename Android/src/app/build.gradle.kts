@@ -34,11 +34,13 @@ android {
 
   defaultConfig {
     applicationId = "com.google.aiedge.gallery"
-    minSdk = 31
+    minSdk = 26
     targetSdk = 35
     versionCode = 19
     versionName = "1.0.10"
-
+    ndk {
+    abiFilters "arm64-v8a", "armeabi-v7a"
+}
     // Needed for HuggingFace auth workflows.
     // Use the scheme of the "Redirect URLs" in HuggingFace app.
     manifestPlaceholders["appAuthRedirectScheme"] =
